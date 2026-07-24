@@ -324,7 +324,7 @@
             'use strict';
 
             // ============================================================
-            // CONFIGURAÇÕES - FLASHBACK
+            // CONFIGURAÇÕES - ROMÂNTICA
             // ============================================================
             const GENERO = 'ROMÂNTICA';
             const COR = '#ffaa00';
@@ -341,7 +341,7 @@
                 'MODA TOP': 'https://raw.githubusercontent.com/radiolojasjc-hub/modatop/refs/heads/main/moda.json',
                 'RELIGIOSA': 'https://raw.githubusercontent.com/radiolojasjc-hub/religiosa/refs/heads/main/religiosa.json',
                 'FLASHBACK': 'https://raw.githubusercontent.com/radiolojasjc-hub/flashbacktop/refs/heads/main/flashback.json',
-              'ROMÂTICA': ''
+              'ROMÂTICA': 'https://raw.githubusercontent.com/radiolojasjc-hub/romanticatop/refs/heads/main/romantica.json'
             };
 
             const CORES_POR_GENERO = {
@@ -373,7 +373,7 @@
             const playlistCache = {};
             let ultimoId = null;
             let carregandoMusica = false;
-            let modoAtual = "FLASHBACK";
+            let modoAtual = "ROMÂNTICA";
 
             const audio = document.getElementById('musicPlayer');
             const playBtn = document.getElementById('playBtn');
