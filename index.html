@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>PLAY 12 •ROMÂNTICA </title>
+    <title>PLAY 12 • ROMÂNTICA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
         body { background: #0a0a0a; overflow: hidden; height: 100vh; }
-        :root { --cor: #ffaa00; --neon-cyan: #00f3ff; --neon-pink: #ff2d7f; }
+        :root { --cor: #ff2d7f; --neon-cyan: #00f3ff; }
         
         .bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0.3; }
         .app { position: relative; z-index: 10; width: 100%; height: 100vh; display: flex; flex-direction: column; justify-content: space-between; background: transparent; }
@@ -127,7 +127,6 @@
         .fav-modal .close-btn { background: linear-gradient(135deg, var(--cor), var(--cor)); border: none; padding: 12px; border-radius: 30px; color: #000; font-weight: bold; cursor: pointer; margin-top: 0; font-size: 0.95rem; }
         .fav-modal .close-btn:active { transform: scale(0.95); }
         
-        /* MODAL DE GÊNEROS FLASHBACK */
         .genres-modal {
             position: fixed;
             bottom: 0;
@@ -143,7 +142,7 @@
             max-height: 60vh;
             overflow-y: auto;
             border-top: 2px solid var(--cor);
-            box-shadow: 0 -10px 40px rgba(255,170,0,0.15);
+            box-shadow: 0 -10px 40px rgba(255,45,127,0.15);
         }
         .genres-modal.open { transform: translateY(0); }
         .genres-modal h3 {
@@ -223,21 +222,21 @@
 </head>
 <body>
     <video id="bgVideo" class="bg" autoplay loop muted playsinline>
-        <source src="flashback.mp4" type="video/mp4">
+        <source src="https://github.com/radiolojasjc-hub/play12/blob/main/abc1.mp4?raw=true" type="video/mp4">
     </video>
 
     <div id="splash">
         <div class="splash-loading">
             <i class="fas fa-circle-notch fa-spin"></i>
-            <p>Carregando FlashBack...</p>
+            <p>Carregando Romântica...</p>
         </div>
     </div>
 
-    <div id="tap-to-start">▶ ATIVAR RÁDIO FLASHBACK</div>
+    <div id="tap-to-start">▶ ATIVAR RÁDIO ROMÂNTICA</div>
 
     <div class="app" id="appContainer" style="display: none;">
         <div class="top-bar" id="topBar">
-            <div class="genre-badge" id="genreBadge" onclick="openGenres()">🕰️ FLASHBACK</div>
+            <div class="genre-badge" id="genreBadge" onclick="openGenres()">❤️ ROMÂNTICA</div>
             <div class="top-buttons">
                 <span class="audio-status" id="audioStatus"><span class="dot"></span> Aguardando</span>
                 <div class="search-wrapper">
@@ -272,7 +271,7 @@
         <div class="teaching-bar">👆 Toque na tela para <span class="cyan">controles</span></div>
     </div>
 
-    <!-- MODAL DE GÊNEROS  -->
+    <!-- MODAL DE GÊNEROS -->
     <div class="genres-modal" id="genresModal">
         <h3><i class="fas fa-head-side-brain"></i> ESCOLHA SEU ESTILO</h3>
         <div class="genres-grid" id="genresGrid"></div>
@@ -327,8 +326,10 @@
             // CONFIGURAÇÕES - ROMÂNTICA
             // ============================================================
             const GENERO = 'ROMÂNTICA';
-            const COR = '#ffaa00';
-            const JSON_URL = 'https://raw.githubusercontent.com/radiolojasjc-hub/romanticatop/refs/heads/main/romantica.js';
+            const COR = '#ff2d7f';
+            
+            // URL CORRETA DO JSON DA ROMÂNTICA
+            const JSON_URL = 'https://raw.githubusercontent.com/radiolojasjc-hub/romanticatop/refs/heads/main/romantica.json';
 
             const GENRE_URLS = {
                 'MPB': 'https://raw.githubusercontent.com/radiolojasjc-hub/mpbtop/refs/heads/main/mpb.json',
@@ -341,7 +342,7 @@
                 'MODA TOP': 'https://raw.githubusercontent.com/radiolojasjc-hub/modatop/refs/heads/main/moda.json',
                 'RELIGIOSA': 'https://raw.githubusercontent.com/radiolojasjc-hub/religiosa/refs/heads/main/religiosa.json',
                 'FLASHBACK': 'https://raw.githubusercontent.com/radiolojasjc-hub/flashbacktop/refs/heads/main/flashback.json',
-              'ROMÂTICA': 'https://raw.githubusercontent.com/radiolojasjc-hub/romanticatop/refs/heads/main/romantica.json'
+                'ROMÂNTICA': JSON_URL
             };
 
             const CORES_POR_GENERO = {
@@ -354,7 +355,8 @@
                 'REGGAE': '#00ffaa',
                 'MODA TOP': '#ff4400',
                 'RELIGIOSA': '#aa55ff',
-                'FLASHBACK': '#ffaa00'
+                'FLASHBACK': '#ffaa00',
+                'ROMÂNTICA': '#ff2d7f'
             };
 
             let musicas = [];
@@ -451,7 +453,7 @@
                 let n = nome.replace(/^\.\//, '').replace(/^\/+/, '');
                 n = n.replace(/[^a-zA-Z0-9\-_.]/g, '');
                 if (!n) return '';
-                return 'https://raw.githubusercontent.com/radiolojasjc-hub/flashbacktop/refs/heads/main/' + n;
+                return 'https://raw.githubusercontent.com/radiolojasjc-hub/romanticatop/refs/heads/main/' + n;
             }
 
             function gerarUrlsAlternativas(musica) {
@@ -518,7 +520,7 @@
                 const idx = favorites.indexOf(id);
                 if (idx > -1) { favorites.splice(idx, 1); showNotification('❤️ Removido', 1000); }
                 else { favorites.push(id); showNotification('❤️ Adicionado!', 1000); }
-                localStorage.setItem('radio_favorites_flashback', JSON.stringify(favorites));
+                localStorage.setItem('radio_favorites_romantica', JSON.stringify(favorites));
                 updateHeartIcon(id);
                 renderFavList();
                 buildGenresGrid();
@@ -975,7 +977,7 @@
             }
 
             // ============================================================
-            // GRID DE GÊNEROS (ROMÂNTICA)
+            // GRID DE GÊNEROS
             // ============================================================
             function buildGenresGrid() {
                 const genresGrid = document.getElementById('genresGrid');
@@ -1006,25 +1008,25 @@
             // ============================================================
             async function iniciar() {
                 try {
-                    try { const saved = localStorage.getItem('radio_favorites_ROMÂNTICA'); if (saved) favorites = JSON.parse(saved); } catch(e) { favorites = []; }
+                    try { const saved = localStorage.getItem('radio_favorites_romantica'); if (saved) favorites = JSON.parse(saved); } catch(e) { favorites = []; }
                     updateFavCount();
                     renderFavList();
                     buildGenresGrid();
 
-                    const listaFlashback = await carregarPlaylistPorGenero('FLASHBACK');
-                    if (!listaFlashback || listaFlashback.length === 0) { 
-                        showNotification('❌ Nenhuma música carregada', 3000); 
-                        setTimeout(() => { location.reload(); }, 3000);
+                    const listaRomantica = await carregarPlaylistPorGenero('ROMÂNTICA');
+                    if (!listaRomantica || listaRomantica.length === 0) { 
+                        showNotification('❌ Nenhuma música carregada - Verifique a URL', 4000); 
+                        setTimeout(() => { location.reload(); }, 4000);
                         return; 
                     }
 
-                    musicas = listaFlashback;
-                    modoAtual = 'FLASHBACK';
+                    musicas = listaRomantica;
+                    modoAtual = 'ROMÂNTICA';
                     currentPlaylist = shuffleArray([...musicas]);
                     currentIndex = 0;
                     const primeira = currentPlaylist[0];
                     if (primeira) { updateNowPlaying(primeira); adicionarAoHistorico(primeira); }
-                    genreBadge.innerHTML = '🕰️ ROMÂNTICA';
+                    genreBadge.innerHTML = '❤️ ROMÂNTICA';
 
                     setTimeout(() => {
                         splash.classList.add('hidden');
@@ -1069,8 +1071,8 @@
             document.getElementById('fabShare').addEventListener('click', () => {
                 const t = currentPlaylist[currentIndex % currentPlaylist.length] || currentPlaylist[0];
                 if (!t) { showNotification('Nenhuma música tocando', 1000); return; }
-                const msg = `🎵 Estou ouvindo "${t.title}" - ${t.artist} no PLAY 12 FLASHBACK! 🕰️`;
-                if (navigator.share) { navigator.share({ title: 'PLAY 12 FLASHBACK', text: msg, url: location.href }).catch(() => {}); }
+                const msg = `🎵 Estou ouvindo "${t.title}" - ${t.artist} no PLAY 12 ROMÂNTICA! ❤️`;
+                if (navigator.share) { navigator.share({ title: 'PLAY 12 ROMÂNTICA', text: msg, url: location.href }).catch(() => {}); }
                 else { navigator.clipboard.writeText(msg + ' ' + location.href).then(() => { showNotification('📋 Copiado!', 2000); }).catch(() => { showNotification('Compartilhamento não disponível', 1000); }); }
                 fabMain.click();
             });
@@ -1097,7 +1099,7 @@
                 if (buscaTimeout) clearTimeout(buscaTimeout);
                 buscaTimeout = setTimeout(() => {
                     if (termo === '') { 
-                        genreBadge.innerHTML = '🕰️ FLASHBACK';
+                        genreBadge.innerHTML = '❤️ ROMÂNTICA';
                         genreBadge.className = 'genre-badge';
                         if (isBackgroundActive && musicas.length > 0) { 
                             currentPlaylist = shuffleArray([...musicas]); 
