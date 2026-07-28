@@ -33,11 +33,11 @@
 {"id":32,"artist":"Whitney-Houston","title":"I-Will-Always-Love-You","genero":"ROMÂNTICO","src":"Whitney-Houston-I-Will-Always-Love-You.mp3"},
 {"id":33,"artist":"Wicked","title":"Game-Single","genero":"ROMÂNTICO","src":"Wicked-Game-Single.m4a"},
 {"id":34,"artist":"Air_Supply","title":"Making_Love_Out_Of_Nothing_At_All","genero":"ROMÂNTICO","src":"Air_Supply-Making_Love_Out_Of_Nothing_At_All.m4a"},
-  {"id":35,"artist":"Editando","title":"Do You Want To Dance","genero":"ROMÂNTICO","src":"Editando-Do-You-Want-To-Dance.mp3"},
-{"id":36,"artist":"Elvis-Presley","title":"Suspicious Minds","genero":"ROMÂNTICO","src":"Elvis-Presley-Suspicious-Minds.mp3"},
-{"id":37,"artist":"Rod-Stewart","title":"Sailing from One Night Only","genero":"ROMÂNTICO","src":"Rod-Stewart-Sailing-from-One-Night-Only.mp3"},
-{"id":38,"artist":"Chicago","title":"If You Leave Me Now","genero":"ROMÂNTICO","src":"Chicago-If-You-Leave-Me-Now.mp3"},
-{"id":39,"artist":"Elvis-Presley","title":"Now or Never","genero":"ROMÂNTICO","src":"Elvis-Presley-Now-or-Never.mp3"},
-{"id":40,"artist":"the-Brasos","title":"There s No More Corn on","genero":"ROMÂNTICO","src":"the-Brasos-There-s-No-More-Corn-on.mp3"},
-{"id":41,"artist":"HSCC","title":"What About Love HEART Cover by The","genero":"ROMÂNTICO","src":"HSCC-What-About-Love-HEART-Cover-by-The.mp3"}
+{"id":35,"artist":"Editando","title":"Do You Want To Dance","genero":"POP","src":"Editando-DoYouWantToDance.mp3"},
+{"id":36,"artist":"Elvis-Presley","title":"Suspicious Minds","genero":"POP","src":"Elvis-Presley-SuspiciousMinds.mp3"},
+{"id":37,"artist":"Rod-Stewart","title":"Sailing from One Night Only","genero":"POP","src":"Rod-Stewart-SailingfromOneNightOnly.mp3"},
+{"id":38,"artist":"Chicago","title":"If You Leave Me Now","genero":"POP","src":"Chicago-IfYouLeaveMeNow.mp3"},
+{"id":39,"artist":"Elvis-Presley","title":"Now or Never","genero":"POP","src":"Elvis-Presley-NoworNever.mp3"},
+{"id":40,"artist":"the-Brasos","title":"There s No More Corn on","genero":"POP","src":"the-Brasos-TheresNoMoreCornon.mp3"},
+{"id":41,"artist":"HSCC","title":"What About Love HEART Cover by The","genero":"POP","src":"HSCC-WhatAboutLoveHEARTCoverbyThe.mp3"}
 ]
