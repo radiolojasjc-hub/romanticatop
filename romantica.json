@@ -39,5 +39,8 @@
 {"id":38,"artist":"Chicago","title":"If You Leave Me Now","genero":"POP","src":"Chicago-IfYouLeaveMeNow.mp3"},
 {"id":39,"artist":"Elvis-Presley","title":"Now or Never","genero":"POP","src":"Elvis-Presley-NoworNever.mp3"},
 {"id":40,"artist":"the-Brasos","title":"There s No More Corn on","genero":"POP","src":"the-Brasos-TheresNoMoreCornon.mp3"},
-{"id":41,"artist":"HSCC","title":"What About Love HEART Cover by The","genero":"POP","src":"HSCC-WhatAboutLoveHEARTCoverbyThe.mp3"}
+{"id":41,"artist":"HSCC","title":"What About Love HEART Cover by The","genero":"POP","src":"HSCC-WhatAboutLoveHEARTCoverbyThe.mp3"},
+ {"id":42,"artist":"Bill","title":"Medley sings I ve Had the Time of My Life","genero":"POP","src":"MedleysingsIveHadtheTimeofMyLife_Bill.mp3"},
+{"id":43,"artist":"The Beatles Anna Go To Him Tradução","title":"The Beatles Anna Go To Him Traduo","genero":"POP","src":"The_Beatles_Anna_Go_To_Him_Traducao.mp3"},
+{"id":44,"artist":"Willie","title":"Nelson Always on My Mind","genero":"POP","src":"NelsonAlwaysonMyMind_Willie.mp3"} 
 ]
